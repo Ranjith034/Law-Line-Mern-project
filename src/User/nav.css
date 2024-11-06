@@ -1,0 +1,73 @@
+.navbar{
+    /* background: red; */
+    /* background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%); */
+    box-shadow: 10px 6px 6px rgb(217, 214, 214);
+}
+.nav-contents{
+    /* background: green; */
+    display: flex;
+    justify-content: space-around;
+}
+.nav-contents p{
+    font-weight: 450;
+    color: black;
+   
+    display: flex;
+    align-items: center;
+    
+}
+.nav-contents p:hover{
+     color: #43e97b;
+     
+}
+.nav-contents span{
+ 
+    display: flex;
+    padding: 4px;
+
+}
+.diff{
+    background-image: linear-gradient(to right, #43e97b 0%, #38f9d7 100%);
+    padding: 8px;
+    border-radius: 25px;
+}
+/* From Uiverse.io by nikk7007 */ 
+/* From Uiverse.io by ShrinilDhorda */ 
+.btn {
+    font-size: 15px;
+    /* padding: 1rem 1.5rem; */
+    border: none;
+    outline: none;
+    border-radius: 0.4rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    /* background-color: rgb(14, 14, 26); */
+    background-image: linear-gradient(to right, #43e97b 0%, #38f9d7 100%);
+    color: rgb(234, 234, 234);
+    font-weight: 700;
+    transition: 0.6s;
+    box-shadow: 0px 0px 60px rgb(190, 190, 193);
+    -webkit-box-reflect: below 10px linear-gradient(to bottom, rgba(0,0,0,0.0), rgba(0,0,0,0.4));
+  }
+  
+  .btn:active {
+    scale: 0.92;
+  }
+  
+  .btn:hover {
+    background: rgb(2,29,78);
+    background: linear-gradient(270deg, rgba(2, 29, 78, 0.681) 0%, rgba(31, 215, 232, 0.873) 60%);
+    color: rgb(4, 4, 38);
+  }
+   
+.nav-contents button{
+    margin: 3px;
+}
+
+@media (max-width: 768px) {
+    .nav-contents {
+        flex-direction: column;
+        align-items: center;
+        
+    }
+}
