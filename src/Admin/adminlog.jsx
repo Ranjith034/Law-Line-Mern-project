@@ -1,5 +1,5 @@
 import axios from "axios"
-import React, { useEffect, useState } from "react"
+import { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
 import './admin.css'
 
@@ -11,7 +11,7 @@ function Adminlog() {
      
     const fetch = async (req,res) => {
     await axios
-    .get("http://localhost:7000/getlawerd")
+    .get("https://law-line-backend-1.onrender.com/getlawerd")
     .then((res) => {
         console.log(res.data)
         setform(res.data)
@@ -42,30 +42,8 @@ useEffect(() => {
 },[])
 
     return(
-        <div className="admin-out">
-           {/* <div className="admin-card">
-            {form.map (value => (
-                <div className="admin-in-card">
-                    <box-icon name='badge-check' type='solid' ></box-icon>
-                    <div className="image-con">
-                        <img src={`http://localhost:7000/static/${value.originalname}`} style={{ maxWidth: '200px', maxHeight: '200px' }}/>
-                    </div>
-                    <div className="c-con">
-                    <p><span>Lawyer Name</span> :{value.name}</p>
-                    <p><span>Lawyer Age</span> :{value.age}</p>
-                    <p><span>Lawyer Work Experience</span> : {value.exp}</p>
-                    <p><span>Lawyer Location</span>: {value.location}</p>
-                    <p><Ratings num={value.ratings} /></p>
-                    <button className="btn">Verify</button>
-                    </div>
-                    
-                </div>
-            )
-
-            )}
-
-           </div> */}
-           <div className="down-add">
+        
+           <div className="flexinger">
            
            {form.map(value => (  
            <div class="card10">
@@ -79,7 +57,7 @@ useEffect(() => {
                       
            <div class="img">
            
-           <img src={`http://localhost:7000/static/${value.originalname}`} style={{ maxWidth: '90px', maxHeight: '90px' }}/>
+           <img src={`https://law-line-backend-1.onrender.com/static/${value.originalname}`} style={{ maxWidth: '90px', maxHeight: '90px' }}/>
             </div>
            
            <span>{value.name}</span>
@@ -94,7 +72,7 @@ useEffect(() => {
              ))}
            
            </div>
-        </div>
+        
     )
 }
 

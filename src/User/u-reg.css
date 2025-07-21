@@ -9,18 +9,25 @@
     width: 300px;
     text-align: center;
     padding: 1rem;
+    
 
     
+}
+
+.uni input{
+  
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .red-container input{
     width: 200px;
     height: 40px;
-    border-radius: 10px;
+   
     padding: 5px;
     font-size: 15px;
-    background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+   
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border: none;
-    outline: #78ff71;
+    
     text-decoration: none;
     text-align: center;
     position: relative;
@@ -36,7 +43,7 @@
     justify-content: center;
     overflow: hidden;
     transition: all 0.25s ease;
-    background-image: linear-gradient(to right, #43e97b 0%, #38f9d7 100%);
+    background-image: var(--main-color);
     border-radius: var(--round);
     border: none;
     outline: none;
@@ -81,7 +88,7 @@
   width: 1rem;
   display: inline-block;
   transition: all 0.5s ease-in-out;
-  background-image: linear-gradient(to right, #43e97b 0%, #38f9d7 100%);
+  background-image: var(--main-color);
   box-shadow: 0 0 3px black;
   border-bottom-left-radius: 0.5rem;
   border-top-right-radius: var(--round);
@@ -109,6 +116,10 @@
   pointer-events: none;
   position: absolute;
   z-index: 1;
+}
+.bt{
+  background: var(--main-color);
+  color: var(--text-color);
 }
 
 .points_wrapper .point {
@@ -238,7 +249,7 @@
 
 
 .reg-out{
-    /* background-color: red; */
+    
     display: flex;
     height: 100vh;
     justify-content: space-around;
@@ -248,9 +259,11 @@
 }
 .reg-inn{
     /* background: green; */
-    border-radius: 45px;
+    border-radius: 5px;
     text-align: center;
-    border: 5px solid #78ff71 ;
+    border: none;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    /* border: 5px solid #78ff71 ; */
     /* background-image: linear-gradient(-225deg, #FFFEFF 0%, #D7FFFE 100%); */
 
 }
@@ -275,6 +288,14 @@
 .foot-reg{
   display: flex;
   justify-content: space-between;
+}
+
+.cards{
+  /* background: red; */
+  text-align: center;
+}
+.cards h2{
+  margin: 2rem;
 }
 
 /*Article*/
@@ -348,8 +369,43 @@
   color: #fff;
   font-size: 1rem;
 }
+.reg-img img{
+  
+  width: 70vh;
+
+}
+.custum-file-upload{
+  text-align: center;
+  /* background: #43e97b; */
+  display: flex;
+  justify-content: center;
+}
+
+.ident{
+  background: var(--main-color);
+  width: 200px;
+}
+
+.cards{
+  /* background: red; */
+  padding: 1rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.file-al{
+ 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+
 @media (min-width: 340px) {
   .card__btn {
+    width: max-content;
+  }
+}
+@media (min-width: 340px) {
+  .reg-inn {
     width: max-content;
   }
 }
@@ -361,5 +417,30 @@
     justify-content: center;
     margin-top: 3rem;
 
+  }
+}
+
+
+/* .find{
+  background-color: aqua;
+} */
+
+
+.r-i-m img{
+
+width: 60vh;
+
+}
+@media (max-width: 756px){
+  .reg-img img {
+    width: 80vw;
+    margin: 2px;
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+
+  }
+  .find{
+    display: none;
   }
 }

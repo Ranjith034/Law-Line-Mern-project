@@ -1,6 +1,6 @@
 import axios from "axios"
-import React, { useEffect, useState } from "react"
-import { useParams } from "react-router-dom"
+import { useEffect, useState } from "react"
+import { useNavigate, useParams } from "react-router-dom"
 import Swal from 'sweetalert2'
 import "./overview.css"
 
@@ -9,12 +9,14 @@ function Overview() {
 
     const {id} = useParams()
 
+    const navigate = useNavigate()
+
    const [onelaw , setonelaw] = useState([])
 
    const details =  async () => {
      
     await axios
-    .get(`http://localhost:7000/lawyerverf?_id=${id}`)
+    .get(`https://law-line-backend-1.onrender.com/lawyerverf?_id=${id}`)
     .then((res)=> {
         console.log(res.data)
         setonelaw(res.data)
@@ -46,7 +48,7 @@ function Overview() {
             Swal.fire({
                 position: "top-end",
                 icon: "success",
-                title: "verifyed Successfully",
+                title: "Set  Successfully",
                 showConfirmButton: false,
                 timer: 1500
               });
@@ -55,6 +57,26 @@ function Overview() {
             console.log(`${err}`)
         })
     }
+
+    const toprate = async () => {
+
+      await axios
+      .post("http://localhost:7000/toprate", onelaw)
+      .then((res) => {
+          console.log("successfully verifyed")
+          Swal.fire({
+              position: "top-end",
+              icon: "success",
+              title: "Verified  Successfully",
+              showConfirmButton: false,
+              timer: 1500
+            });
+            navigate('/admin/lawyer')
+      })
+      .catch((err) => {
+          console.log(`${err}`)
+      })
+  }
 
 
 
@@ -66,6 +88,7 @@ function Overview() {
    },[])
 
     return(
+      <div className="design">
         <div className="over-view-mains">
             <div className="rect">
             <div className="circle2">
@@ -76,11 +99,12 @@ function Overview() {
             
             <div className="content-q">
                 <div className="d-v">
-                    <p>Name :{onelaw.name}</p>
-                    <p>Age :{onelaw.age}</p>
-                    <p>Location :{onelaw.location}</p>
-                    <p>Carrier Started:{onelaw.csYear}</p>
-                    <p>No of SuccessCase:{onelaw.successcase}</p>
+                    <p>Name : {onelaw.name}</p>
+                    <p>Age : {onelaw.age}</p>
+                    <p>Location : {onelaw.location}</p>
+                    <p>Carrier Started: {onelaw.csYear}</p>
+                    <p>No of SuccessCase : {onelaw.successcase}</p>
+                    <p>Lawyer : {onelaw.lawtype}</p>
                     <p><Ratings num={onelaw.ratings} /></p>
 
                 </div>
@@ -91,14 +115,15 @@ function Overview() {
             <div className="navig">
            
 <button class="cssbuttons-io" onClick={Verify}>
-  <span>Verify<span><box-icon type='solid' name='badge-check'></box-icon></span></span>
-</button>
-<button class="cssbuttons-io">
   <span>Set As Top Rated</span>
+</button>
+<button class="cssbuttons-io" onClick={toprate}>
+  <span>Verify<span><box-icon type='solid' name='badge-check'></box-icon></span></span>
 </button>
 
             </div>
             
+        </div>
         </div>
     )
 }

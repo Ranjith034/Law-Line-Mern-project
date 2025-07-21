@@ -68,7 +68,7 @@
   .follow1 {
     border: none;
     border-radius: 25px;
-    background-color: #0f1113;
+    background: var(--main-color);
     color: white;
     padding: 8px 15px;
     font-weight: 700;
@@ -188,8 +188,7 @@
   }
   
   .card12 {
-    --light: #d9d9d9;
-    --dark: #1f1f1f;
+    
   
     position: relative;
   
@@ -199,13 +198,10 @@
   
     padding: 1.5rem;
     width: 15rem;
-    background-color: rgb(172, 250, 233);
-    background-image: linear-gradient(
-      135deg,
-      rgba(172, 250, 233, 1) 0%,
-      rgba(213, 143, 235, 1) 50%,
-      rgba(242, 126, 241, 1) 100%
-    );
+    background: var(--main-color);
+    color: #fff;
+   
+  
   
     border-radius: 0.5rem;
   
@@ -282,7 +278,7 @@
   }
   
   .scroll-snap-card {
-    height: 400px;
+    height: 450px;
     width: 380px;
     scroll-snap-type: y mandatory;
     overflow: auto;
@@ -322,9 +318,11 @@
     box-sizing: content-box;
     height: 40px;
     padding: 10px 10px;
+   
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    /* align-items: center; */
     border-radius: 8px;
   }
   
@@ -348,7 +346,8 @@
   .word20 {
     display: block;
     height: 100%;
-     padding-left: 6px; 
+    padding-left: 7px;
+ 
     color: #956afa;
     animation: spin_4991 4s infinite;
   }
@@ -551,6 +550,163 @@
     overflow: auto;
     border-radius: 10px;
   }
+  .box-2{
+    /* background: red; */
+    display: flex;
+    justify-content: space-between;
+  }
+  .box2-1{
+    background: green;
+    
+  }
+  .box-pro{
+    /* background: #38f9d7; */
+    width: 230px;
+    text-align: center;
+    border-radius: 9px;
+    padding: 1rem;
+    /* background: rgb(223, 225, 235);
+    border-radius: 50px;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px; */
+  }
+
   
+  .box-pro img{
+    border-radius: 50%;
+    width: 5vh;
+
+  }
+  .component-container{
+     /* background: green;  */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    overflow: hidden;
+  }
+  .component-container p{
+    font-size: 1rem;
+    font-weight: 500;
+     
+  }
+
+  .divpro{
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+    background-image: var(--main-color);
+    color: #fff;
+    border: none;
+   margin-top: 1rem;
+  }
+
+.ot-f{
+  display: flex;
+  justify-content: space-around;
+}
+
+/* From Uiverse.io by Nawsome */ 
+
+.card40 {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.stats-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100px;
+  height: 100px;
+  border-radius: 20px;
+  background-color: rgb(255, 255, 255);
+  padding: 15px;
+  box-shadow:
+    20px 20px 60px #e6e6e6,
+    -20px -20px 60px #f3f3f3;
+}
+.heading {
+  font-size: 0.7em;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+.bottom-wrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 10px;
+}
+.bottom-wrapper .star {
+  width: 30px;
+  fill: gold;
+}
+.bottom-wrapper .tag {
+  width: 27px;
+  fill: rgb(141, 214, 32);
+}
+.bottom-wrapper .thumb {
+  width: 27px;
+  fill: blueviolet;
+}
+.bottom-wrapper p {
+  font-size: 1.2em;
+  font-weight: 700;
+}
+.comb{
+ 
+
+    overflow: auto;
+    display: flex;
+    scroll-snap-type: x mandatory;
+    width: 90%;
+    margin: 0 auto;
+    padding: 0 15px;
   
+}
+
+.line {
+  height: 220px;
+  border-left:2px solid black ;
+}
+.line .across{
+  margin-left: 4rem;
+} 
+.fol-car{
+  display: flex;
   
+ 
+}
+.foll-img img{
+  border-radius: 50%;
+}
+
+.foll-out{
+  overflow: auto;
+  display: flex;
+  scroll-snap-type: x mandatory;
+  width: 60%;
+  margin: 0 auto;
+  padding: 0 15px;
+  
+}
+.wide {
+  margin-left: 6rem;
+  
+}
+
+@media (max-width: 756px){
+  .fol-car {
+    
+    display: flex;
+    flex-wrap: wrap;
+
+    
+    
+
+  }
+}

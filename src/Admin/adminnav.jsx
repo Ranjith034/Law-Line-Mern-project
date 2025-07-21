@@ -1,5 +1,6 @@
 import React from "react"
-import { Outlet } from "react-router-dom"
+import { Link, Outlet } from "react-router-dom"
+import l1 from "../Assects/logo.jpg"
 import './adminnav.css'
 
 
@@ -10,10 +11,10 @@ function AdminNav() {
             <header>
                 <nav className="navbar">
                     <div className="nav-contents">
-                        <p>Logo</p>
-                        <p><span><box-icon name='file-find' type='solid' animation='tada' ></box-icon></span>Lawyer</p>
-                        <p><span><box-icon name='chat' type='solid' animation='tada' ></box-icon></span>Verified</p>
-                        <p><span><box-icon name='certification' animation='tada' ></box-icon></span>IPC Sections</p>
+                    <img src={l1} style={{width:"100px", height:"63px"}}/>
+                       <Link to={"admin/lawyer"}><p>Lawyer</p></Link> 
+                        <Link to={"admin/verifylaw"}><p>Verified</p></Link>
+                        <p>IPC Sections</p>
                         <button className="btn">My Profile</button>
                     </div>
                     

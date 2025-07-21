@@ -172,7 +172,7 @@
    
 }
 .col{
-    color: #78ff71 ;
+    color: #00154c ;
 }
 
 .left-y{
@@ -180,6 +180,12 @@
     justify-content: center;
     margin-top: 10rem;
 }
+
+.limg img{
+  
+    width: 70vh;
+  
+  }
 
 
    @media (max-width: 756px){

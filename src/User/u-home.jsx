@@ -1,14 +1,15 @@
 // 
 
 import axios from "axios";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Swal from 'sweetalert2';
-import c1 from '../Assects/c1.png';
-import c3 from '../Assects/c4.png';
-import test1 from '../Assects/test1.png';
+import c5 from "../Assects/Advertising 5.png";
+import c3 from '../Assects/Approval 3.png';
+import c1 from '../Assects/Lawyer (1).png';
+import c4 from "../Assects/World Connection 1.png";
 import Add from "./add-comp";
+import Footer from "./footer";
 import './home.css';
-import Lawyercard from "./lawyercard";
 
 
 
@@ -34,7 +35,7 @@ function UserHome() {
 
        const getlawyers = async (req,res) => {
         await axios
-        .get("http://localhost:7000/getverflawer")
+        .get("https://law-line-backend-1.onrender.com/getverflawer")
         .then((res) => {
              console.log(res.data)
             setdatas(res.data)
@@ -85,56 +86,7 @@ function UserHome() {
                 </div>
 
             </div>
-            {/* <div className="down-add">
-                            {datas.map(value => (
-                                
-                                <div  className="fetch-h">
-                                     <div className="image-con">
-                        <img src={`http://localhost:7000/static/${value.originalname}`} />
-                    </div>
-                                <p><span>Lawyer Name</span> :<span> </span>{value.name}</p>
-                                <p><span>Lawyer Age</span> :<span> </span>{value.age}</p>
-                                <p><span>Lawyer Work Experience</span> :<span> </span>{value.exp}</p>
-                                <p><span>Lawyer Location</span>: <span> </span>{value.location}</p>
-                                <p><Ratings num={value.ratings} /></p>
-                                </div>
-                            ))}
-                        </div> */}
-                        {/* <div className="down-add">
-                       
-                        <div class="container1">
-                         <div class="card_box1">
-                         <span>
-                            <p>Experienced Attorneys</p>
-                         </span>
-                         </div>
-                        </div>
-                        
-                        <div class="container1">
-                         <div class="card_box1">
-                         <span className="text-c">
-                            <p>Personalized Approach</p>
-                            </span>
-                         </div>
-                        </div>
-                        
-                        <div class="container1">
-                         <div class="card_box1">
-                         <span className="text-c">
-                            <p>Clear Communication</p>
-                            </span>
-                         </div>
-                        </div>
-                        
-                        <div class="container1">
-                         <div class="card_box1">
-                         <span className="text-c">
-                            <p>Proven Results</p>
-                         </span>
-                         </div>
-                        </div>
-                       
-                        </div> */}
+            
                         <div className="down-add">
                        
                             <div className="c-card">
@@ -151,7 +103,7 @@ function UserHome() {
                                 <p>Personalized Approach
                                 </p>
                                 </div>
-                            <div className="c1-img">
+                            <div className="c-img">
                                 <img src={c3}/>
                             </div>
                             </div>
@@ -161,7 +113,7 @@ function UserHome() {
                                 </p>
                                 </div>
                             <div className="c-img">
-                                <img src={c1}/>
+                                <img src={c4}/>
                             </div>
                             </div>
                             <div className="c3-card">
@@ -170,7 +122,7 @@ function UserHome() {
                                 </p>
                                 </div>
                             <div className="c-img">
-                                <img src={c1}/>
+                                <img src={c5}/>
                             </div>
                             </div>
             </div>
@@ -192,15 +144,15 @@ function UserHome() {
                        
             <div class="img">
             
-            <img src={`http://localhost:7000/static/${value.originalname}`} style={{ maxWidth: '90px', maxHeight: '90px' }}/>
+            <img src={`https://law-line-backend-1.onrender.com/static/${value.originalname}`} style={{ maxWidth: '370px', maxHeight: '160px' }}/>
              </div>
             
             <span>{value.name}</span>
             
             <p class="job"> {value.location}</p>
-            <p class="job"> {value.age}</p>
-            <p class="job">Senior Lawyer</p>
-            <button onClick={click}> Click
+            <p class="job"> {value.exp}</p>
+            <p class="job"> {value.lawtype}</p>
+            <button onClick={click}> View
             </button>
            
             
@@ -252,42 +204,18 @@ function UserHome() {
             </div>
             
             </div>
-            <div className="fig">
-                <img src={test1}/>
+            <div>
+                <div className="findlaw">
+                    <button onClick={click}>Find Me a Lawyer</button>
+                    <h2>Get Expert Advice</h2>
+                    </div>
             </div>
-            <div className="down-add">
-            <div className="down-add">
-                <div className="upper">
-                <Lawyercard/>
-                </div>
+            
+            
+            <div className="foot">
+            <Footer/>
             </div>
- <div className="logos">         
-<div id="triangle">
-  <svg id="Layer_1" data-name="Layer 1" version="1.1" viewBox="0 0 2000 2000">
-    <polygon
-      class="cls-1"
-      points="928 781 1021 951 784.5 1371.97 1618 1371.97 1530.32 1544 509 1539 928 781"
-    ></polygon>
-    <polygon
-      class="cls-3"
-      points="1618 1371.97 784.5 1371.97 874.93 1211 1346 1211 923.1 456 1110.06 456 1618 1371.97"
-    ></polygon>
-    <g id="Layer_2" data-name="Layer 2">
-      <polygon
-        class="cls-2"
-        points="418 1372.74 509 1539 928 781 1162.32 1211 1346 1211 923.1 456 418 1372.74"
-      ></polygon>
-    </g>
-  </svg>
-</div>
-<div className="l-name">
-    <h1>Find Lawyer</h1>
-    <p className="">"Find the Right Lawyer, Right When You Need Them."</p>
-</div>
-</div>  
-
-
-            </div>
+           
 
 
         </>

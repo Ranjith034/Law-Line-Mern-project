@@ -1,9 +1,9 @@
 import axios from "axios"
 import 'boxicons'
-import React, { useState } from "react"
+import { useState } from "react"
 import { useNavigate } from "react-router-dom"
 import Swal from 'sweetalert2'
-import g6 from '../Assects/Group 6.png'
+import Footer from "../User/footer"
 import './lawyerlog.css'
 
 
@@ -20,7 +20,7 @@ function Login() {
        
 
     }
-
+   
     const [form ,setform] = useState(initialstate)
     
 
@@ -34,7 +34,7 @@ function Login() {
 
      
     await axios
-     .post("http://localhost:7000/getonelawyer", form)
+     .post("https://law-line-backend-1.onrender.com/getonelawyer", form)
      .then((res) => {
         console.log(res.data)
         if(!res.data){
@@ -63,7 +63,7 @@ function Login() {
         Swal.fire({
             position: "top-end",
             icon: "error",
-            title: `${err}`,
+            title: err.response?.data?.message,
             showConfirmButton: false,
             timer: 1500
           });
@@ -75,20 +75,21 @@ function Login() {
 
 
     return(
+      <>
       <div className="l-l-f">
        <div className="reg-out">
         
         <div className="reg-inn">
-        <p className="heading">Login</p>
+        <p className="headings">Login</p>
         <div className="red-container">
             <form onSubmit={submit}> 
                 <p>
-                <span className="icon"><box-icon name='user'></box-icon></span>
+                
                 <input placeholder="name" value={form.name} onChange={(e) => setform({...form ,name: e.target.value})}/>
                 </p>
                 <p>
-                <span className="icon"><box-icon name='key' ></box-icon></span>
-                <input placeholder="details" value={form.details} onChange={(e) => setform({...form ,details: e.target.value})}/>
+                
+                <input type="password" placeholder="password" value={form.details} onChange={(e) => setform({...form ,details: e.target.value})}/>
                 </p><br></br>
                 
                 <button onClick={submit} className="btnss">
@@ -129,12 +130,12 @@ function Login() {
             </div>
         </div>
        </div>
-       <div className="log-img">
-       <img src={g6}/>
-            
-          </div>
+      
+       
         
        </div>
+        <Footer/>
+        </>
        
     )
 

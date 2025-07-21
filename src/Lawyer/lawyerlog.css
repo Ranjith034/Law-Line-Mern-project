@@ -15,14 +15,13 @@
 .red-container input{
     width: 200px;
     height: 40px;
-    border-radius: 10px;
     padding: 5px;
     font-size: 15px;
     background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
     border: none;
     outline: #1ceeff;
     text-decoration: none;
-    text-align: center;
+    padding-left: 9px;
     position: relative;
 }
 .btnss{

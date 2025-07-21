@@ -18,9 +18,7 @@
 
     
 }
-.admin-out{
-    margin: 5rem;
-}
+
 .c-con{
     /* background: red; */
     text-align: center;
@@ -32,4 +30,11 @@
 }
 .c-con span{
     color: blue;
+}
+.flexinger{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 2rem;
+   
 }
