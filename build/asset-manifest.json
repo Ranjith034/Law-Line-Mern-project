@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/static/css/main.88aaadfa.css",
+    "main.js": "/static/js/main.d3cae59f.js",
+    "static/js/453.9d2e5b0c.chunk.js": "/static/js/453.9d2e5b0c.chunk.js",
+    "static/media/he.png": "/static/media/he.781df33923ac64a838c6.png",
+    "static/media/Consulting.png": "/static/media/Consulting.355701b46b82f678fd12.png",
+    "static/media/User Group.png": "/static/media/User Group.2c3170a9b0ea2c208e44.png",
+    "static/media/logo.jpg": "/static/media/logo.a5bda4cc3213abadb456.jpg",
+    "static/media/Data Maintenance.png": "/static/media/Data Maintenance.7b1f985515cbd3fe5c35.png",
+    "static/media/law.png": "/static/media/law.9042354ad526f8330b06.png",
+    "static/media/Lawyer (1).png": "/static/media/Lawyer (1).6162ed98eedb4b9afdab.png",
+    "static/media/Lawyer.png": "/static/media/Lawyer.c700f2f0b07c204ced5a.png",
+    "static/media/Authentication 4.png": "/static/media/Authentication 4.f82cf4c469d90cec8f69.png",
+    "static/media/Approval 3.png": "/static/media/Approval 3.87cbe10a6928277d5065.png",
+    "static/media/World Connection 1.png": "/static/media/World Connection 1.4a541a7ea5464c80e7df.png",
+    "static/media/Advertising 5.png": "/static/media/Advertising 5.dd12f730facb09facd4d.png",
+    "index.html": "/index.html",
+    "main.88aaadfa.css.map": "/static/css/main.88aaadfa.css.map",
+    "main.d3cae59f.js.map": "/static/js/main.d3cae59f.js.map",
+    "453.9d2e5b0c.chunk.js.map": "/static/js/453.9d2e5b0c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.88aaadfa.css",
+    "static/js/main.d3cae59f.js"
+  ]
+}
